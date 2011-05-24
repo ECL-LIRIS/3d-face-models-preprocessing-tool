@@ -1,0 +1,233 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A49ABC7B-F87B-47B7-A853-77384AA8BB3E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ModelPreProcessing</RootNamespace>
+    <AssemblyName>ModelPreProcessing2x</AssemblyName>
+    <ApplicationIcon>sunflower.ico</ApplicationIcon>
+    <ManifestCertificateThumbprint>FB2C08781D0AD0D3E3D32D15DBD96662DFFFE0C2</ManifestCertificateThumbprint>
+    <ManifestKeyFile>3DModelPreProcessing2x_1_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetZone>LocalIntranet</TargetZone>
+    <Win32Resource>
+    </Win32Resource>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SignAssembly>false</SignAssembly>
+    <TargetFrameworkSubset>Full</TargetFrameworkSubset>
+    <StartupObject>ModelPreProcessing.Program</StartupObject>
+    <PublishUrl>..\FP_install2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <InstallUrl>http://perso.ec-lyon.fr/szeptycki.przemyslaw/app/</InstallUrl>
+    <UpdateUrl>\\souci\FP_install2\</UpdateUrl>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>3DModelPreProcessing2x</ProductName>
+    <PublisherName>Przemysław Szeptycki</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>www.pszeptycki.oz.pl</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>128</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;RENDER_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;RENDER_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2911.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Source\BasedClasses\ClBaseRenderObject.cs" />
+    <Compile Include="Source\BasedClasses\ClBaseEaventHandler.cs" />
+    <Compile Include="Source\FilesExtensionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\FilesExtensionForm.Designer.cs">
+      <DependentUpon>FilesExtensionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Recivers\ClNewRecognitionAlgorithmReciver.cs" />
+    <Compile Include="Source\Rendering\ClRender.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Source\Senders\ClEventSender.cs" />
+    <Compile Include="Source\Senders\CScrollPanelMessageFilter.cs" />
+    <Compile Include="Source\Interfaces\IEventHandler.cs" />
+    <Compile Include="Source\Recivers\ClNewAlgorithmReciver.cs" />
+    <Compile Include="Source\Recivers\ClInformationReciver.cs" />
+    <Compile Include="Source\DxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\DxForm.Designer.cs">
+      <DependentUpon>DxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Interfaces\IRenderObject.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Rendering\RenderObjects\Cl3DRenderObject.cs" />
+    <Compile Include="Source\Rendering\RenderObjects\ClCamera.cs" />
+    <Compile Include="Source\Rendering\RenderObjects\ClCoordinateSystem.cs" />
+    <Compile Include="Source\Rendering\RenderObjects\ClRenderObjectLine.cs" />
+    <EmbeddedResource Include="Source\DxForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\FilesExtensionForm.resx">
+      <DependentUpon>FilesExtensionForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="3DModelPreProcessing2x_1_TemporaryKey.pfx" />
+    <None Include="3DModelPreProcessing2x_TemporaryKey.pfx" />
+    <None Include="app.config" />
+    <None Include="ModelPreProcessing_TemporaryKey.pfx" />
+    <None Include="Resources\folder_open_48.ico" />
+    <None Include="Resources\search_48.ico" />
+    <None Include="Resources\redo_round48_h.ico" />
+    <None Include="Resources\hand.ico" />
+    <None Include="Resources\Arrow Up1.ico" />
+    <None Include="Resources\Arrow Forward1.ico" />
+    <None Include="Resources\Arrow Down1.ico" />
+    <None Include="Resources\Arrow Back1.ico" />
+    <None Include="Resources\liris2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hand.ico" />
+    <Content Include="sunflower.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MathIridiumLib\Iridium.csproj">
+      <Project>{26FC15DE-EFDA-403A-8284-1E2A4AE8A9D8}</Project>
+      <Name>Iridium</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PreprocessingAlgorithms\Preprocessing.csproj">
+      <Project>{A653D8EB-6FEE-4A6E-BB7B-4C7BCFACC094}</Project>
+      <Name>Preprocessing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PreprocessingFramework\PreprocessingFramework.csproj">
+      <Project>{3D1D831E-6F65-43A9-AD76-7F4E3905A527}</Project>
+      <Name>PreprocessingFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.DirectX">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.DirectX.Direct3D">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
