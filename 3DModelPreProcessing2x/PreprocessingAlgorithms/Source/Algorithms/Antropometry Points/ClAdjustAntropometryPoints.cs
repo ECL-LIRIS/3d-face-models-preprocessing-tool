@@ -33,7 +33,7 @@ namespace Preprocessing
             return new ClAdjustAntropometryPoints();
         }
 
-        public static string ALGORITHM_NAME = @"Algorithms\Antropometry Points\Adjust points from GenericModel";
+        public static string ALGORITHM_NAME = @"Algorithms\Anthropometry Points\Adjust points from GenericModel";
 
         public ClAdjustAntropometryPoints() : base(ALGORITHM_NAME) { }
 
