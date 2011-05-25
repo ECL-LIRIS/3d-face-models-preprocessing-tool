@@ -33,7 +33,7 @@ namespace Preprocessing
             return new ClFindNoseTipMaxVal();
         }
 
-        public static string ALGORITHM_NAME = @"Algorithms\Antropometry Points\Nose Tip (Max Z val.)";
+        public static string ALGORITHM_NAME = @"Algorithms\Anthropometry Points\Nose Tip (Max Z val.)";
 
         public ClFindNoseTipMaxVal() : base(ALGORITHM_NAME) { }
 

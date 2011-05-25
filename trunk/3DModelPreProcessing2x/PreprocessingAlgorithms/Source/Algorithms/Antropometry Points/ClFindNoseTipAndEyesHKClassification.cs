@@ -44,7 +44,7 @@ namespace Preprocessing
             return new ClFindNoseTipAndEyesHKClassification();
         }
 
-        public static string ALGORITHM_NAME = @"Algorithms\Antropometry Points\Nose Tip, Eyes (Curvature analysis)";
+        public static string ALGORITHM_NAME = @"Algorithms\Anthropometry Points\Nose Tip, Eyes (Curvature analysis)";
 
         public ClFindNoseTipAndEyesHKClassification() : base(ALGORITHM_NAME) { }
 
