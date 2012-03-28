@@ -1,4 +1,4 @@
-/*  Copyright (C) 2011 Przemyslaw Szeptycki <pszeptycki@gmail.com>
+/*  Copyright (C) 2011 Przemyslaw Szeptycki <pszeptycki@gmail.com>, Ecole Centrale de Lyon,
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
