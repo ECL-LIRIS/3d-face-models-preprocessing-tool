@@ -13,7 +13,7 @@ If you have used this application for research, please cite my paper:
 
 Please contact me if you have any questions regarding how to use the application. 
 
-# License
+# Licence
     Copyright (C) 2011  Przemyslaw Szeptycki, Ecole Centrale de Lyon
 
     This program is free software: you can redistribute it and/or modify
