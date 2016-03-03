@@ -1,0 +1,1 @@
+The tool was written as an integral part of my PhD thesis entitled: "Processing and analysis of 2.5D face models for non-rigid mapping based face recognition".
